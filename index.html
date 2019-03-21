@@ -1,0 +1,126 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Final task base on Gulp</title>
+    <link rel="stylesheet" href="css/vendor/resetstyle.css" type="text/css">
+    <link rel="stylesheet" href="dist/main.css" type="text/css">
+    <link rel="stylesheet" href="dist/svg-spritesheet/css/sprites.css" />
+    <script>
+        (function (doc) {
+            var scripts = doc.getElementsByTagName('script')
+            var script = scripts[scripts.length - 1]
+            var xhr = new XMLHttpRequest()
+            xhr.onload = function () {
+                var div = doc.createElement('div')
+                div.innerHTML = this.responseText
+                div.style.display = 'none'
+                script.parentNode.insertBefore(div, script)
+            }
+            xhr.open('get', '/svg/icons.svg', true)
+            xhr.send()
+        })(document)
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__brand">
+            <a href="#" class="header__brand__link">
+                <div class="header__brand__link__logo"><img src="img/logo.svg" alt="XYZ Company Logo"></div>
+                <div class="header__brand__link__title">Internship Projects</div>
+            </a>
+        </div>
+        <nav>
+            <ul class="header__nav">
+                <li class="header__nav__item">
+                    <a href="#" class="header__nav__item__link header__nav__item__link--selected">Infrusctracture</a>
+                </li>
+                <li class="header__nav__item">
+                    <a href="#" class="header__nav__item__link">Human resourses</a>
+                </li>
+                <li class="header__nav__item">
+                    <a href="#" class="header__nav__item__link">Administration</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__users">
+            <div class="header__users__name">Tashi Gyamtso</div>
+            <div class="header__users__frame">
+                <!--user's avatar will be here-->
+            </div>
+            <div class="header__users__menu"></div>
+        </div>
+    </header>
+    <!--Side bar begins here -->
+    <aside>
+        <ul class="sidebar">
+            <li class="sidebar__item sidebar__item--selected"><a href="#" class="sidebar__item__link">
+                    <span class="sidebar__item__icon">
+                        <img src="img/project.svg" alt="Applications">
+                    </span>
+                    <span class="sidebar__item__text">Applications</span>
+                </a></li>
+            <li class="sidebar__item"><a href="#" class="sidebar__item__link">
+                    <span class="sidebar__item__icon">
+                        <img src="img/applications.svg" alt="Applications">
+                    </span>
+                    <span class="sidebar__item__text">Applications</span>
+                </a></li>
+            <li class="sidebar__item"><a href="#" class="sidebar__item__link">
+                    <span class="sidebar__item__icon">
+                        <img src="img/Services.svg" alt="Services">
+                    </span>
+                    <span class="sidebar__item__text">Services</span>
+                </a></li>
+            <li class="sidebar__item"><a href="#" class="sidebar__item__link">
+                    <span class="sidebar__item__icon">
+                        <img src="img/devices.svg" alt="Company Services">
+                    </span>
+                    <span class="sidebar__item__text">Company devices </span>
+                </a></li>
+            <li class="sidebar__item"><a href="#" class="sidebar__item__link">
+                    <span class="sidebar__item__icon">
+                        <img src="img/devices_relationships.svg" alt="Devices Relastionships">
+                    </span>
+                    <span class="sidebar__item__text">Devices relationships</span>
+                </a></li>
+        </ul>
+    </aside>
+    <section class="content">
+        <div class="content__box">
+            <h1>Application Title</h1>
+            <div class="content__box__columns">
+                <article>
+                    <h2 class="content__box__columns--intro">This sidebar is of full height (100%) and always shown.
+                        Scroll down the page to see the result.</h2>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                        distribution of letters, as opposed to using 'Content here, content here', making it look like
+                        readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                        their default model text, and a search for 'lorem ipsum' will uncover many web sites still in
+                        their
+                        infancy.
+                        Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                        concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis
+                        evertitureum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no
+                        molestiae
+                        voluptatibus.
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                        classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
+                        Latin
+                        professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
+                        consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical
+                        literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
+                        1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written
+                        in 45 BC. </p>
+
+                </article>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+$color__primary--lighter: rgb(228, 224, 250) !default;
+$color__primary--light: rgb(125, 128, 151);
+$color__primary: rgb(70, 47, 159) !default;
+$color__primary--dark: rgb(91, 83, 142) !default;
+$base__color--white: rgb(255, 255, 255)!default;
+$base__color--dark: rgb(220, 224, 236)!default;
+$base__color--darker: rgb(121, 124, 146)!default;
+$base__fontsize: 16 !default;
+$base_line: 20 !default;
+@function em($px, $base: $base__fontsize) {
+  @return ($px / $base) *1em;
+}

@@ -1,0 +1,46 @@
+.sidebar {
+  width: em(320);
+  height: 100%;
+  position: fixed;
+  font-size: em(14);
+  background-color: $base__color__white;
+  box-shadow: 0 0 emm(2) 0 rgba(0,0,0,0.23);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    line-height: em(40);
+    font-weight: 600;
+    list-style: none;
+    padding: em(20) 0 em(5);
+    border-bottom: em(2) solid #EDEFF6;
+  }
+
+  &__item--selected {
+    border-left: em(4) solid $color__primary--dark;
+    background-color: $color__primary--lighter;
+
+    a {
+      color: $color__primary--dark;
+    }
+  }
+
+  &__item__link {
+    text-decoration: none;
+    color: $base__color__darker;
+  }
+
+  &__item__icon {
+    width: auto;
+    height: em(32);
+    margin-left: em(25);
+    margin-right: em(20);
+  }
+
+  &__item__text {
+    margin: 0;
+    padding: 0;
+    vertical-align: text-bottom;
+  }
+}
